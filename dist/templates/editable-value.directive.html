@@ -1,0 +1,15 @@
+<div ng-switch="type">
+    <div ng-switch-when="text">
+        <ng-include src="vm.data.templates.text" escape-key="vm.cancel()"></ng-include>
+    </div>
+    <div ng-switch-when="number">
+        num
+        <ng-include src="vm.data.templates.number" escape-key="vm.cancel()"></ng-include>
+    </div>
+    <div ng-switch-when="select">
+        <ng-include src="vm.data.templates.select" escape-key="vm.cancel()"></ng-include>
+    </div>
+    <div ng-switch-default>
+        <ng-include src="vm.data.templates.default" escape-key="vm.cancel()"></ng-include>
+    </div>
+</div>

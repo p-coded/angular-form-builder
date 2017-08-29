@@ -1,0 +1,59 @@
+/************************************************************************************
+    editable-value-default
+************************************************************************************/
+.col
+{
+    transition:all 1s ease;   
+}
+form.editableValueDefaultForm
+{
+    margin:0;
+    padding:0;
+}
+
+input.editableValueDefaultInput
+{
+    border:1px solid #DDD;
+    border-radius:2px;
+    padding:0 10px;
+    height: auto;
+    text-align:inherit;
+    font-size:97%;
+    line-height:inherit;
+}
+
+form.editableValueDefaultForm .form-group {
+    display: block;
+}
+
+form.editableValueDefaultForm .form-control {
+    width:100%;
+} 
+
+form.editableValueDefaultForm .input-group-btn {
+    height:0;
+}
+form.editableValueDefaultForm .input-group-btn .btn {
+    height: 100%;
+    padding: 1px 12px;
+    line-height: unset;
+}
+
+.form-group-xs .form-control {
+    height: 22px;
+    padding: 4px 8px;
+    font-size: 8pt;
+    line-height: 1.5;
+    border-radius: 4px;
+}
+
+.input-group-xs > .form-control, 
+.input-group-xs > .input-group-addon, 
+.input-group-xs > .input-group-btn > .btn 
+{
+    height: 22px;
+    padding: 1px 6px;
+    font-size: 8pt;
+    line-height: 1.5;
+    border-radius: 3px;
+}

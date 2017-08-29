@@ -1,0 +1,76 @@
+<div ng-switch on="orientation">
+    <div ng-switch-when="horizontal">
+        <div >
+            <form class="form-horizontal" ng-dblclick="vm.switchEditMode(true)" ng-if="!vm.editMode">
+                <div class="form-group" ng-class="vm.getClass('form-group')">
+                    <label class="col-md-3 control-label" ng-bind="linkedLabel" ></label>
+                    <div class="col col-md-9">
+                        <input type="{{type}}" class="form-control" ng-model="vm.data.value" placeholder="{{placeholder}}" enter-key="vm.switchEditMode(true)" string-to-number readonly>
+                    </div>
+                </div>
+            </form>
+
+            <form class="form-horizontal" ng-submit="vm.save()" ng-if="vm.editMode">
+                <div class="form-group" ng-class="vm.getClass('form-group')">
+                    <label class="col-md-3 control-label" ng-bind="linkedLabel"></label>
+                    <div class="col col-md-9">
+                        <div class="input-group" ng-class="vm.getClass('input-group')">
+                            <input type="{{type}}" class="form-control" ng-model="vm.data.value" placeholder="{{placeholder}}" auto-focus-select string-to-number>
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&zwj;</button>
+                                <button type="button" class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>  
+        </div>
+
+    </div>
+    <div ng-switch-when="inline">
+        <div >
+            <form class="form-inline" ng-dblclick="vm.switchEditMode(true)" ng-if="!vm.editMode" >
+                <div class="form-group" ng-class="vm.getClass('form-group')">
+                    <label class="control-label" ng-bind="linkedLabel" ></label>
+                    <input type="{{type}}" class="form-control" ng-model="vm.data.value" placeholder="{{placeholder}}" enter-key="vm.switchEditMode(true)" string-to-number readonly>
+                </div>
+            </form>
+            <form class="form-inline" ng-submit="vm.save()" ng-if="vm.editMode">
+                <div class="form-group" ng-class="vm.getClass('form-group')">
+                    <label class="control-label" ng-bind="linkedLabel" ></label>
+                    <div class="input-group" ng-class="vm.getClass('input-group')">
+                        <input type="{{type}}" class="form-control" ng-model="vm.data.value" placeholder="{{placeholder}}" string-to-number auto-focus-select>
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&zwj;</button>
+                            <button type="button" class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div ng-switch-default>
+        <div >
+            <form ng-dblclick="vm.switchEditMode(true)" ng-if="!vm.editMode" >
+                <div class="form-group" ng-class="vm.getClass('form-group')">
+                    <label class="control-label" ng-bind="linkedLabel" ></label>
+                    <input type="{{type}}" class="form-control" ng-model="vm.data.value" placeholder="{{placeholder}}" enter-key="vm.switchEditMode(true)" string-to-number readonly>
+                </div>
+            </form>
+
+            <form ng-submit="vm.save()" ng-if="vm.editMode">
+                <div class="form-group" ng-class="vm.getClass('form-group')">
+                    <label class="control-label" ng-bind="linkedLabel"></label>
+                    <div class="input-group" ng-class="vm.getClass('input-group')">
+                        <input type="{{type}}" class="form-control" ng-model="vm.data.value" placeholder="{{placeholder}}" min="{{min}}" max="{{max}}" step="{{step}}" string-to-number auto-focus-select>
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&zwj;</button>
+                            <button type="button" class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

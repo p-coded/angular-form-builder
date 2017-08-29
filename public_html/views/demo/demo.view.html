@@ -1,0 +1,69 @@
+<div class="app-site-heading">
+    <div class="app-site-heading-container">
+        <h1 class="text-center app-site-heading-title"><editable-value value="vm.title"></editable-value></h1>
+    </div>
+</div>
+
+<input type="number" class="form-control" ng-model="vm.cols" min="3" max="9" step="1" string-to-number ng-change="vm.log(vm.cols)">
+
+<div class="row">
+    <div class="col" ng-class="vm.getCol1Span()">
+        <input type="checkbox" ng-model="editBlockA" ng-init="editBlockA === false">
+        <div class="well">
+            <editable-value value="vm.title" edit-mode="editBlockA"></editable-value>
+            <h1><editable-value value="vm.title" edit-mode="editBlockA"></editable-value></h1>
+            <h2><editable-value value="vm.title" edit-mode="editBlockA"></editable-value></h2>
+            <h3><editable-value value="vm.title" edit-mode="editBlockA"></editable-value></h3>
+            <span><editable-value value="vm.title" edit-mode="editBlockA"></editable-value></span>
+        </div>
+    </div>
+    <div class="col" ng-class="vm.getCol2Span()">
+        <input type="checkbox" ng-model="editBlockB" ng-init="editBlockB === false">
+        <div class="well text-right">
+            <editable-value value="vm.title" edit-mode="editBlockB"></editable-value>
+            <h1><editable-value value="vm.title" edit-mode="editBlockB"></editable-value></h1>
+            <h2><editable-value value="vm.title" edit-mode="editBlockB"></editable-value></h2>
+            <h3><editable-value value="vm.title" edit-mode="editBlockB"></editable-value></h3>
+            <span><editable-value value="vm.title" edit-mode="editBlockB"></editable-value></span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col" ng-class="vm.getCol1Span()">
+        <input type="checkbox" ng-model="editBlockC">
+        <div class="well">
+            <h1><editable-value value="vm.title" size="xs" edit-mode="editBlockC"></editable-value></h1>
+            <h1><editable-value value="vm.title" size="sm" edit-mode="editBlockC"></editable-value></h1>
+            <h1><editable-value value="vm.title" size="lg" edit-mode="editBlockC"></editable-value></h1>
+            <h1><editable-value value="vm.title" edit-mode="editBlockC"></editable-value></h1>
+        </div>
+    </div>
+    <div class="col" ng-class="vm.getCol2Span()">
+        <div class="well text-right">
+            <p><editable-value value="vm.title" pattern="vm.pattern1"></editable-value></p>
+        <p><editable-value value="vm.title" pattern="vm.pattern2"></editable-value></p>
+        </div>
+    </div>
+</div>
+
+<p style="font-size:50pt;" ><editable-value value="vm.title" edit-mode="vm.edit"></editable-value></p>
+
+<div class="row">
+    <div class="col" ng-class="vm.getCol1Span()">
+        <div class="well">
+            <editable-value type="number" size="lg"></editable-value>
+        </div>
+    </div>
+    <div class="col" ng-class="vm.getCol2Span()">
+        <div class="well text-right">
+            <editable-value type="select" value="selectValue" size="lg" values="vm.values"></editable-value>
+            {{selectValue}}
+        </div>
+        <div class="well text-right">
+            <editable-value type="select" value="selectValue2" size="sm" values="vm.values2"></editable-value>
+            {{selectValue2}}
+        </div>
+
+    </div>
+</div>
+

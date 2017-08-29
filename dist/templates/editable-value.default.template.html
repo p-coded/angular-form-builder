@@ -1,0 +1,7 @@
+<span ng-bind="vm.data.value" ng-dblclick="vm.switchEditMode(true)" ng-if="!vm.editMode" style="cursor:pointer;"></span>
+<form ng-submit="vm.save()" name="form" ng-if="vm.editMode" class="form-inline editableValueDefaultForm">
+    <div class="form-group" ng-class="{'has-error': form.value.$invalid}">
+        <input type="{{type}}" name="value" class="form-control editableValueDefaultInput" ng-model="vm.data.value" placeholder="{{placeholder}}" ng-pattern="pattern" auto-focus-select>
+        <button type="submit" class="btn btn-primary hidden" ng-disabled="form.$invalid"><span class="glyphicon glyphicon-floppy-disk"></span>&zwj;</button>
+    </div>
+</form>
